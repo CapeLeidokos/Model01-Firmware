@@ -249,7 +249,11 @@ static kaleidoscope::LEDSolidColor solidBlue(0, 70, 130);
 static kaleidoscope::LEDSolidColor solidIndigo(0, 0, 170);
 static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
 
+KALEIDOSCOPE_INIT_PLUGINS(
 
+    // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
+    MouseKeys
+)
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
   * It's called when your keyboard first powers up. This is where you set up
@@ -257,6 +261,9 @@ static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
   */
 
 void setup() {
+   
+   KALEIDOSCOPE_CONNECT_PLUGINS
+   
   // First, call Kaleidoscope's internal setup function
   Kaleidoscope.setup();
 
@@ -306,10 +313,7 @@ void setup() {
     &NumPad,
 
     // The macros plugin adds support for macros
-    &Macros,
-
-    // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
-    &MouseKeys
+    &Macros
   );
 
   // While we hope to improve this in the future, the NumPad plugin
