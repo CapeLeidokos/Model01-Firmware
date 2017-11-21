@@ -26,7 +26,7 @@
 #include "Kaleidoscope-LEDControl.h"
 
 // Support for "Numpad" mode, which is mostly just the Numpad specific LED mode
-#include "Kaleidoscope-NumPad.h"
+// #include "Kaleidoscope-NumPad.h"
 
 // Support for an "LED off mode"
 #include "LED-Off.h"
@@ -54,7 +54,7 @@
 #include "Kaleidoscope-LED-AlphaSquare.h"
 
 // Support for Keyboardio's internal keyboard testing mode
-#include "Kaleidoscope-Model01-TestMode.h"
+// #include "Kaleidoscope-Model01-TestMode.h"
 
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
@@ -268,7 +268,7 @@ void setup() {
     &BootGreetingEffect,
 
     // The hardware test mode, which can be invoked by tapping Prog, LED and the left Fn button at the same time.
-    &TestMode,
+//     &TestMode,
 
     // LEDControl provides support for other LED modes
     &LEDControl,
@@ -303,7 +303,7 @@ void setup() {
 
     // The numpad plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
-    &NumPad,
+//     &NumPad,
 
     // The macros plugin adds support for macros
     &Macros,
@@ -314,7 +314,7 @@ void setup() {
 
   // While we hope to improve this in the future, the NumPad plugin
   // needs to be explicitly told which keymap layer is your numpad layer
-  NumPad.numPadLayer = NUMPAD;
+//   NumPad.numPadLayer = NUMPAD;
 
   // We configure the AlphaSquare effect to use RED letters
   AlphaSquare.color = { 255, 0, 0 };
