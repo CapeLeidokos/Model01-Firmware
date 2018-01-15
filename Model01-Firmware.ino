@@ -59,6 +59,8 @@
 // Support for host power management (suspend & wakeup)
 #include "Kaleidoscope-HostPowerManagement.h"
 
+// Support for host power management (suspend & wakeup)
+#include "Kaleidoscope-OneShot.h"
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
